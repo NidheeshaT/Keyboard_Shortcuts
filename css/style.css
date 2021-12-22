@@ -1,0 +1,179 @@
+/* CSS reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:linear-gradient(rgb(255, 243, 234),rgb(255, 237, 237));
+}
+/* CSS variables */
+/* :root{
+
+} */
+
+/* Navbar */
+#navbar{
+    position: fixed;
+    top: 0rem;
+    right: 0rem;
+    left: 0rem; 
+}
+
+nav{
+    content: "";
+    background:rgba(0, 0, 0, 0.472);
+    position: absolute;
+    backdrop-filter:blur(2px);
+    filter: blur(0.3px);
+
+}
+
+nav:hover{
+    background: rgb(19, 27, 22);
+    filter: none;
+    backdrop-filter: none;
+}
+
+#logo{
+    display: inline-block;
+    margin: 10px ;
+    position: absolute;
+    margin-left: 1%;
+    width: 8px;
+    height: 8px;
+    background-color: yellowgreen;
+}
+
+#navbar ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+}
+
+#navbar ul li{
+    list-style: none;
+    padding: 0.2rem;
+    margin: 0.5rem 1rem;
+}
+
+#navbar ul li a{
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    text-decoration: none;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    border:0.3rem solid transparent;
+    border-radius: 3px;
+}
+#navbar ul li a:hover{
+    background:linear-gradient(225deg,rgb(8, 8, 8),rgb(102, 102, 102));
+    border:0.3rem outset rgb(36, 36, 36);
+}
+
+#navbar ul li a:active{
+    background:linear-gradient(225deg,rgb(15, 15, 15),rgb(78, 78, 78));
+    margin: 0.1rem;
+    border-width: 0.2rem;
+}
+
+
+/* header|home */
+#home{
+    height:35rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+#home::before{
+    content: "";
+    position: absolute;
+    background:url(../resources/laptop-gf144fee81_1920.jpg) rgb(83, 83, 83) no-repeat center center/cover ;
+    background-blend-mode:soft-light;
+    width: 100%;
+    height: inherit;
+    z-index: -1;
+}
+
+
+#home h1{
+    color:  white;
+    text-shadow: 2px 1px 1px rgb(0, 0, 0),-1px -2px 1px rgb(121, 121, 121) ;
+}
+
+/* About */
+#about{
+   padding:4rem 0.2rem;
+   margin:4rem 0.2rem;
+   background-color: rgba(0, 183, 255, 0.178);
+   border-left:50px solid rgba(0, 183, 255, 0.472) ;
+   text-align: center;
+}
+
+
+#about h2{
+    margin: 1rem;
+}
+
+#about div{
+    font-size: 20px;
+}
+
+/* Content */
+#content{
+    padding:4rem 2rem;    
+}
+
+div{
+    padding: 1rem;
+    margin: 1rem;
+}
+.keyboard{
+    display: inline-block;
+    background-color: #292929;
+    color: white;
+    font-size:1.5rem;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: default;
+    text-shadow: 1px 1px 1px rgb(25, 52, 63);
+}
+
+.keyboard:hover{
+    background: radial-gradient(#000000,#424242);
+}
+
+
+/* Footer */
+
+footer{
+    background-color: black;
+    color: white;
+    height: 10%;
+    border-left: 10px solid rgb(17, 17, 17)  ;
+    border-right: 10px solid rgb(17, 17, 17)  ;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Utility class */
+.h-primary{
+    font-size: 3rem;
+    
+}
+.h-secondary{
+    font-size: 2rem;
+    text-shadow: 1px 1px 2px rgb(49, 26, 5) ;    
+}
+
+.box-shad{
+    box-shadow:2px 2px 14px 0px black;
+}
