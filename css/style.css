@@ -22,9 +22,6 @@ body{
     top: 0rem;
     right: 0rem;
     left: 0rem; 
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
 }
 
 nav{
@@ -46,14 +43,14 @@ nav:hover{
     28deg);
     transform-style:preserve-3d;
     display: inline-block;
-    position: absolute;
-    left:1rem;
+    height: fit-content;
     background-color: yellowgreen;
 }
 
 #navbar ul{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
     padding: 0.5rem;
 }
