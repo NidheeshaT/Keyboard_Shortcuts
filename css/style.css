@@ -22,6 +22,9 @@ body{
     top: 0rem;
     right: 0rem;
     left: 0rem; 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 nav{
@@ -30,7 +33,6 @@ nav{
     position: absolute;
     backdrop-filter:blur(2px);
     filter: blur(0.3px);
-
 }
 
 nav:hover{
@@ -40,12 +42,12 @@ nav:hover{
 }
 
 #logo{
+    transform: perspective(100px) rotate3d(0,1,0,
+    28deg);
+    transform-style:preserve-3d;
     display: inline-block;
-    margin: 10px ;
     position: absolute;
-    margin-left: 1%;
-    width: 8px;
-    height: 8px;
+    left:1rem;
     background-color: yellowgreen;
 }
 
@@ -89,7 +91,8 @@ nav:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 5rem;
+    margin-bottom: 8rem;
+    box-shadow:  13px 4px 10px 3px rgb(104, 108, 124);
 }
 
 #home::before{
@@ -112,11 +115,31 @@ nav:hover{
 #about{
    padding:4rem 0.2rem;
    margin:4rem 0.2rem;
+   margin-bottom: 10rem; 
    background-color: rgba(0, 183, 255, 0.178);
-   border-left:50px solid rgba(0, 183, 255, 0.472) ;
+   border-left:50px solid rgb(0 ,0, 0 , 44%); ;
    text-align: center;
+   animation: color1 10s ease-in 2s infinite ;
 }
 
+@keyframes color1 {
+    0%{
+        background-color: rgba(0, 0, 255, 0.1);
+        border-color: rgba(0, 0, 255, 0.7);
+    }
+    33%{
+        background-color:rgba(255, 0, 0, 0.1) ;
+        border-color:rgba(255, 0, 0, 0.7)  ;
+    }
+    66%{
+        background-color: rgba(0, 255, 0, 0.1);
+        border-color: rgba(0, 255,0, 0.7);
+    }   
+    100%{
+        background-color: rgba(0, 0, 255, 0.1);
+        border-color: rgba(0, 0, 255, 0.7);
+    }
+}
 
 #about h2{
     margin: 1rem;
@@ -128,10 +151,15 @@ nav:hover{
 
 /* Content */
 #content{
-    padding:4rem 2rem;    
+    padding:4rem 2rem;   
+    margin-bottom: 10rem; 
+    border: 2px solid black;
+    border-top: 10px solid black;
+    border-bottom: 10px solid black;
+    border-radius: 10px; 
 }
 
-div{
+#content div{
     padding: 1rem;
     margin: 1rem;
 }
@@ -161,6 +189,10 @@ footer{
     border-right: 10px solid rgb(17, 17, 17)  ;
     display: flex;
     justify-content: center;
+}
+
+footer div{
+    margin:10px;
 }
 
 
