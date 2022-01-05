@@ -40,12 +40,12 @@ nav:hover{
 }
 
 #logo{
+    transform: perspective(100px) rotate3d(0,1,0,
+    28deg);
+    transform-style:preserve-3d;
     display: inline-block;
-    margin: 10px ;
     position: absolute;
-    margin-left: 1%;
-    width: 8px;
-    height: 8px;
+    left:1rem;
     background-color: yellowgreen;
 }
 
