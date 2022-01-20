@@ -95,8 +95,7 @@ nav:hover{
 #home::before{
     content: "";
     position: absolute;
-    background:url(../resources/laptop-gf144fee81_1920.jpg) rgb(83, 83, 83) no-repeat center center/cover ;
-    background-blend-mode:soft-light;
+    background: rgb(0, 0, 0) no-repeat center center/cover ;
     width: 100%;
     height: inherit;
     z-index: -1;
@@ -104,8 +103,8 @@ nav:hover{
 
 
 #home h1{
-    color:  white;
-    text-shadow: 2px 1px 1px rgb(0, 0, 0),-1px -2px 1px rgb(121, 121, 121) ;
+    color:  rgb(0, 255, 34);
+    text-shadow: 5px 5px 12px rgb(0, 255, 34),-1px -1px 1px rgb(0, 0, 0) ;
 }
 
 /* About */
