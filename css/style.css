@@ -84,27 +84,43 @@ nav:hover{
 
 /* header|home */
 #home{
-    height:35rem;
+    height:50rem;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 8rem;
     box-shadow:  13px 4px 10px 3px rgb(104, 108, 124);
+    background-color: #00000073;
 }
 
 #home::before{
     content: "";
     position: absolute;
-    background: rgb(0, 0, 0) no-repeat center center/cover ;
+    background:url(../resources/markus-spiske-iar-afB0QQw-unsplash.jpg) rgb(0, 0, 0) no-repeat center center/cover ;
     width: 100%;
     height: inherit;
     z-index: -1;
+    animation: pan 30s ease-out 0s infinite;
 }
 
+@keyframes pan {
+    0%{
+        background-position:top ;
+        background-position-x: left;
+    }
+    50%{
+        background-position:bottom ;
+        background-position-x: right;
+    }
+    100%{
+        background-position: top ;
+        background-position-x: left;
+    }
+}
 
 #home h1{
-    color:  rgb(0, 255, 34);
-    text-shadow: 5px 5px 12px rgb(0, 255, 34),-1px -1px 1px rgb(0, 0, 0) ;
+    color: rgb(0 217 29);
+    text-shadow: 15px 30px 6px rgb(66 193 83), -1px 2px 1px rgb(17 105 0), 2px -1px 1px rgb(101 255 71);
 }
 
 /* About */
