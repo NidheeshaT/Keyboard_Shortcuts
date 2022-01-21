@@ -127,6 +127,7 @@ nav:hover{
 }
 
 #home h1{
+    text-align: center;
     color: rgb(0 217 29);
     text-shadow: 15px 30px 6px rgb(66 193 83), -1px 2px 1px rgb(17 105 0), 2px -1px 1px rgb(101 255 71);
 }
@@ -203,7 +204,6 @@ nav:hover{
 
 footer{
     background-color: black;
-    color: white;
     height: 10%;
     border-left: 10px solid rgb(17, 17, 17)  ;
     border-right: 10px solid rgb(17, 17, 17)  ;
@@ -213,6 +213,15 @@ footer{
 
 footer div{
     margin:10px;
+}
+footer div a{
+    position: relative;
+    color: white;
+    text-decoration: none;
+}
+
+footer div :visited{
+    color: white;
 }
 
 
