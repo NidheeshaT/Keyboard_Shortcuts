@@ -39,12 +39,20 @@ nav:hover{
 }
 
 #logo{
-    transform: perspective(100px) rotate3d(0,1,0,
-    28deg);
+    transform: perspective(90px) rotate3d(0.3,1,0,
+    40deg);
     transform-style:preserve-3d;
     display: inline-block;
     height: fit-content;
-    background-color: yellowgreen;
+}
+#logo s{
+    color: #1fe900;
+    box-shadow: 1px 0px 17px 4px #96ff64;
+    border-radius: 35%;
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-shadow: 2px 2px #0d6300;
+    background-color: #0000005e;
 }
 
 #navbar ul{
@@ -84,28 +92,44 @@ nav:hover{
 
 /* header|home */
 #home{
-    height:35rem;
+    height:50rem;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 8rem;
     box-shadow:  13px 4px 10px 3px rgb(104, 108, 124);
+    background-color: #00000073;
 }
 
 #home::before{
     content: "";
     position: absolute;
-    background:url(../resources/laptop-gf144fee81_1920.jpg) rgb(83, 83, 83) no-repeat center center/cover ;
-    background-blend-mode:soft-light;
+    background:url(../resources/markus-spiske-iar-afB0QQw-unsplash.jpg) rgb(0, 0, 0) no-repeat center center/cover ;
     width: 100%;
     height: inherit;
     z-index: -1;
+    animation: pan 30s ease-out 0s infinite;
 }
 
+@keyframes pan {
+    0%{
+        background-position:top ;
+        background-position-x: left;
+    }
+    50%{
+        background-position:bottom ;
+        background-position-x: right;
+    }
+    100%{
+        background-position: top ;
+        background-position-x: left;
+    }
+}
 
 #home h1{
-    color:  white;
-    text-shadow: 2px 1px 1px rgb(0, 0, 0),-1px -2px 1px rgb(121, 121, 121) ;
+    text-align: center;
+    color: rgb(0 217 29);
+    text-shadow: 15px 30px 6px rgb(66 193 83), -1px 2px 1px rgb(17 105 0), 2px -1px 1px rgb(101 255 71);
 }
 
 /* About */
@@ -180,7 +204,6 @@ nav:hover{
 
 footer{
     background-color: black;
-    color: white;
     height: 10%;
     border-left: 10px solid rgb(17, 17, 17)  ;
     border-right: 10px solid rgb(17, 17, 17)  ;
@@ -190,6 +213,15 @@ footer{
 
 footer div{
     margin:10px;
+}
+footer div a{
+    position: relative;
+    color: white;
+    text-decoration: none;
+}
+
+footer div :visited{
+    color: white;
 }
 
 
