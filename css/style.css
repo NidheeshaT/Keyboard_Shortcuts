@@ -39,12 +39,20 @@ nav:hover{
 }
 
 #logo{
-    transform: perspective(100px) rotate3d(0,1,0,
-    28deg);
+    transform: perspective(90px) rotate3d(0.3,1,0,
+    40deg);
     transform-style:preserve-3d;
     display: inline-block;
     height: fit-content;
-    background-color: yellowgreen;
+}
+#logo s{
+    color: #1fe900;
+    box-shadow: 1px 0px 17px 4px #96ff64;
+    border-radius: 35%;
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-shadow: 2px 2px #0d6300;
+    background-color: #0000005e;
 }
 
 #navbar ul{
