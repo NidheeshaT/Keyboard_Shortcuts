@@ -149,17 +149,27 @@ nav:hover{
 
 #about div{
     font-size: 20px;
-    animation: disappear 10s cubic-bezier(0, 0, 0, 0.62) 3s infinite;
+    animation: twinkle 10s cubic-bezier(0, 0, 0.1, 0.83) 3s infinite;
 }
 
-@keyframes disappear {
+#sen-1{
+    animation-delay: 1s !important;
+}
+#sen-2{
+    animation-delay: 2s !important;
+}
+#sen-3{
+    animation-delay: 3s !important;
+}
+
+@keyframes twinkle {
     0%{
         opacity: 1;
     }
-    10%{
+    20%{
         opacity: 0;
     }
-    20%{
+    40%{
         opacity: 1;
     }
 }
@@ -209,18 +219,27 @@ footer{
     height: 10%;
     display: flex;
     justify-content: center;
+    color: transparent;
 }
 
-footer div{
+footer:hover{
+    color: var(--prime);
+}
+
+footer > div{
     margin:10px;
+    text-align: center;
+}
+footer div div{
+    color: var(--prime);
+    animation: twinkle 5s linear 0s infinite;
 }
 footer div a{
-    position: relative;
-    color: var(--prime);
+    
     text-decoration: none;
 }
 
-footer div :visited{
+footer div a:visited{
     color: var(--prime);
 }
 
