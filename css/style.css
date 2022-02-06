@@ -3,18 +3,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color:var(--second);
+    
 }
 html{
     scroll-behavior:smooth;
 }
 
 body{
-    background:linear-gradient(rgb(255, 243, 234),rgb(255, 237, 237));
+    background:black;
 }
 /* CSS variables */
-/* :root{
-
-} */
+:root{
+    --prime:black;
+    --second:#00c723;
+}
 
 /* Navbar */
 #navbar{
@@ -24,9 +27,8 @@ body{
     left: 0rem; 
 }
 
-nav{
-    content: "";
-    background:rgba(0, 0, 0, 0.472);
+nav{    
+    background:rgb(0 0 0 / 24%);
     position: absolute;
     backdrop-filter:blur(2px);
     filter: blur(0.3px);
@@ -97,7 +99,7 @@ nav:hover{
     align-items: center;
     justify-content: center;
     margin-bottom: 8rem;
-    box-shadow:  13px 4px 10px 3px rgb(104, 108, 124);
+    /* box-shadow:  13px 4px 10px 3px rgb(104, 108, 124); */
     background-color: #00000073;
 }
 
@@ -137,30 +139,9 @@ nav:hover{
    padding:4rem 0.2rem;
    margin:4rem 0.2rem;
    margin-bottom: 10rem; 
-   background-color: rgba(0, 183, 255, 0.178);
-   border-left:50px solid rgb(0 ,0, 0 , 44%); ;
    text-align: center;
-   animation: color1 10s ease-in 2s infinite ;
 }
 
-@keyframes color1 {
-    0%{
-        background-color: rgba(0, 0, 255, 0.1);
-        border-color: rgba(0, 0, 255, 0.7);
-    }
-    33%{
-        background-color:rgba(255, 0, 0, 0.1) ;
-        border-color:rgba(255, 0, 0, 0.7)  ;
-    }
-    66%{
-        background-color: rgba(0, 255, 0, 0.1);
-        border-color: rgba(0, 255,0, 0.7);
-    }   
-    100%{
-        background-color: rgba(0, 0, 255, 0.1);
-        border-color: rgba(0, 0, 255, 0.7);
-    }
-}
 
 #about h2{
     margin: 1rem;
@@ -168,22 +149,52 @@ nav:hover{
 
 #about div{
     font-size: 20px;
+    animation: twinkle 10s cubic-bezier(0, 0, 0.1, 0.83) 3s infinite;
+}
+
+#sen-1{
+    animation-delay: 1s !important;
+}
+#sen-2{
+    animation-delay: 2s !important;
+}
+#sen-3{
+    animation-delay: 3s !important;
+}
+
+@keyframes twinkle {
+    0%{
+        opacity: 1;
+    }
+    20%{
+        opacity: 0;
+    }
+    40%{
+        opacity: 1;
+    }
 }
 
 /* Content */
 #content{
-    padding:4rem 2rem;   
+    padding:4rem 5%;  
+    padding-right:0px ; 
     margin-bottom: 10rem; 
-    border: 2px solid black;
-    border-top: 10px solid black;
-    border-bottom: 10px solid black;
+    border: 3px solid var(--second);
     border-radius: 10px; 
+    background: rgb(0 25 2);
 }
 
-#content div{
-    padding: 1rem;
-    margin: 1rem;
+#content> div{
+    padding: 1rem 1%;
+    margin: 1rem 2%;
 }
+
+.info{
+    padding-top: 25px;
+    padding-left:40px;
+    font-size: 1.2rem;
+}
+
 .keyboard{
     display: inline-block;
     background-color: #292929;
@@ -193,35 +204,43 @@ nav:hover{
     padding: 0.5rem 1rem;
     cursor: default;
     text-shadow: 1px 1px 1px rgb(25, 52, 63);
+    margin: 3px;
 }
 
 .keyboard:hover{
-    background: radial-gradient(#000000,#424242);
+    background: radial-gradient(#000000,#343434);
 }
 
 
 /* Footer */
 
 footer{
-    background-color: black;
+    background-color: var(--second);
     height: 10%;
-    border-left: 10px solid rgb(17, 17, 17)  ;
-    border-right: 10px solid rgb(17, 17, 17)  ;
     display: flex;
     justify-content: center;
+    color: transparent;
 }
 
-footer div{
+footer:hover{
+    color: var(--prime);
+}
+
+footer > div{
     margin:10px;
+    text-align: center;
+}
+footer div div{
+    color: var(--prime);
+    animation: twinkle 5s linear 0s infinite;
 }
 footer div a{
-    position: relative;
-    color: white;
+    
     text-decoration: none;
 }
 
-footer div :visited{
-    color: white;
+footer div a:visited{
+    color: var(--prime);
 }
 
 
@@ -232,9 +251,16 @@ footer div :visited{
 }
 .h-secondary{
     font-size: 2rem;
-    text-shadow: 1px 1px 2px rgb(49, 26, 5) ;    
+    text-shadow: 3px 3px 1px rgb(0 80 0); ;
+    margin-bottom: 2rem;    
+}
+
+.h-three{
+    font-size: 1.5rem;
+    margin: 3px 6px;
 }
 
 .box-shad{
-    box-shadow:2px 2px 14px 0px black;
+    box-shadow:2px 2px 14px 0px var(--second);
 }
+
